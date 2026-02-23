@@ -250,10 +250,101 @@ textarea {
   background: linear-gradient(270deg, #D4A437, #e8bc5a);
 }
 
+/* Menu Items - Horizontal Scroll (Mobile) & Grid (Desktop) */
+.menu-items-scroll {
+  position: relative;
+}
+
 .menu-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 0.5rem 0.25rem 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.menu-items::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-items .menu-card {
+  min-width: 260px;
+  max-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* Scroll Shadow Effects */
+.scroll-shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-items-scroll:hover .scroll-shadow {
+  opacity: 1;
+}
+
+.scroll-shadow-left {
+  left: 0;
+  background: linear-gradient(to right, #111111 0%, transparent 100%);
+}
+
+.scroll-shadow-right {
+  right: 0;
+  background: linear-gradient(to left, #111111 0%, transparent 100%);
+}
+
+[dir="rtl"] .scroll-shadow-left {
+  left: auto;
+  right: 0;
+  background: linear-gradient(to left, #111111 0%, transparent 100%);
+}
+
+[dir="rtl"] .scroll-shadow-right {
+  right: auto;
+  left: 0;
+  background: linear-gradient(to right, #111111 0%, transparent 100%);
+}
+
+/* Desktop Grid Layout */
+@media (min-width: 1025px) {
+  .menu-items-scroll {
+    position: static;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 0;
+  }
+  
+  .menu-items .menu-card {
+    min-width: auto;
+    max-width: none;
+    flex: none;
+    scroll-snap-align: none;
+  }
+  
+  .scroll-shadow {
+    display: none;
+  }
+  
+  .menu-items-scroll:hover .scroll-shadow {
+    opacity: 0;
+  }
 }
 
 /* Menu Card - Premium Gold Design */

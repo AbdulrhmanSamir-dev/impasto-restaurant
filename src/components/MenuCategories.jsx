@@ -13,14 +13,18 @@ const MenuCategories = ({ menu }) => {
             <h2 className="category-title">{category.categoryName[language]}</h2>
             <div className="category-decoration"></div>
           </div>
-          <div className="menu-items">
-            {category.items.map((item) => (
-              <MenuCard 
-                key={item.id} 
-                item={item} 
-                categoryName={category.categoryName[language]}
-              />
-            ))}
+          <div className="menu-items-scroll">
+            <div className="menu-items">
+              {category.items.map((item) => (
+                <MenuCard 
+                  key={item.id} 
+                  item={item} 
+                  categoryName={category.categoryName[language]}
+                />
+              ))}
+            </div>
+            <div className="scroll-shadow scroll-shadow-left"></div>
+            <div className="scroll-shadow scroll-shadow-right"></div>
           </div>
         </div>
       ))}
