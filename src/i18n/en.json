@@ -1,0 +1,55 @@
+{
+  "header": {
+    "home": "Home",
+    "menu": "Menu",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "contact": "Contact",
+    "language": "Language",
+    "orderNow": "Order Now"
+  },
+  "hero": {
+    "headline": "Fresh. Fast. Delivered.",
+    "subheadline": "Delicious Italian flavors delivered right to your door."
+  },
+  "menu": {
+    "title": "Our Menu",
+    "size": "Size",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "addToCart": "Add to Cart",
+    "notes": "Add Notes"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "clear": "Clear Cart",
+    "checkout": "Proceed to Checkout"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "address": "Delivery Address",
+    "notes": "Optional Notes",
+    "paymentMethod": "Payment Method",
+    "cashOnDelivery": "Cash on Delivery",
+    "placeOrder": "Place Order",
+    "validation": {
+      "required": "This field is required"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "phoneCalls": "Phone (Calls & WhatsApp)",
+    "phoneCallsOnly": "Phone (Calls Only)",
+    "email": "Email",
+    "followUs": "Follow Us"
+  },
+  "reviews": {
+    "title": "Customer Reviews"
+  }
+}

@@ -1,0 +1,31 @@
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button hover animations */
+.btn, button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Menu card hover */
+.menu-card:hover {
+  box-shadow: 0 0 15px rgba(212, 164, 55, 0.3);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* Size button animations */
+.size-btn {
+  transition: all 0.25s ease;
+}
+
+/* Add to cart button animation */
+.btn-add-to-cart {
+  transition: all 0.3s ease;
+}
+
+/* Quantity button animation */
+.qty-btn {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
